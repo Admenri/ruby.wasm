@@ -361,6 +361,7 @@ module RubyWasm
 
       cflags = @cflags.dup
       xcflags = @xcflags.dup
+      xcflags << "-pthread"
       xcflags << "-DWASM_SETJMP_STACK_BUFFER_SIZE=24576"
       xcflags << "-DWASM_FIBER_STACK_BUFFER_SIZE=24576"
       xcflags << "-DWASM_SCAN_STACK_BUFFER_SIZE=24576"
