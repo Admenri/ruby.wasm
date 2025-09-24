@@ -35,7 +35,7 @@ RUN set -eux pipefail; \
   chmod -R a+w $RUSTUP_HOME $CARGO_HOME
 
 # Install the latest Ruby to use the latest Bundler for cross-building C extension gems.
-ADD https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.1.tar.gz /buildruby.tar.gz
+ADD https://raw.githubusercontent.com/Admenri/ruby.wasm/refs/heads/main/ruby-3.4.1.wasm.tar.gz /buildruby.tar.gz
 RUN set -eux; \
   mkdir /buildruby; \
   tar -xf /buildruby.tar.gz -C /buildruby --strip-components=1; \

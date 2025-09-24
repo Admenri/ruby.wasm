@@ -30,7 +30,7 @@ RUN set -eux pipefail; \
     sh -s -- -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION; \
   chmod -R a+w $RUSTUP_HOME $CARGO_HOME
 
-ADD https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.1.tar.gz /buildruby.tar.gz
+ADD https://raw.githubusercontent.com/Admenri/ruby.wasm/refs/heads/main/ruby-3.4.1.wasm.tar.gz /buildruby.tar.gz
 RUN set -eux; \
   mkdir /buildruby; \
   tar -xf /buildruby.tar.gz -C /buildruby --strip-components=1; \
